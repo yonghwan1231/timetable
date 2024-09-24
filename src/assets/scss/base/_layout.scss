@@ -1,0 +1,97 @@
+.flex {
+  @include flex();
+}
+
+.jc_bw {
+  justify-content: space-between !important;
+}
+.jc_ar {
+  justify-content: space-around !important;
+}
+.jc_ev {
+  justify-content: space-evenly !important;
+}
+.jc_s {
+  justify-content: flex-start !important;
+}
+.jc_c {
+  justify-content: center !important;
+}
+.jc_e {
+  justify-content: flex-end !important;
+}
+
+.ai_s {
+  align-items: flex-start !important;
+}
+.ai_c {
+  align-items: center !important;
+}
+.ai_e {
+  align-items: flex-end !important;
+}
+.ai_st {
+  align-items: stretch !important;
+}
+.col {
+  flex-direction: column !important;
+}
+
+.flex_wrap {
+  flex-wrap: wrap !important;
+}
+
+@for $i from 1 through 20 {
+  .cgap_#{$i*4} {
+    column-gap: $i * 4px !important;
+  }
+  .rgap_#{$i*4} {
+    row-gap: $i * 4px !important;
+  }
+}
+
+@for $i from 1 through 30 {
+  .fs_#{$i*2} {
+    font-size: $i * 2px !important;
+  }
+}
+
+@for $i from 0 through 50 {
+  .p_#{$i*4} {
+    padding: $i * 4px !important;
+  }
+  .pt_#{$i*4} {
+    padding-top: $i * 4px !important;
+  }
+  .pr_#{$i*4} {
+    padding-right: $i * 4px !important;
+  }
+  .pl_#{$i*4} {
+    padding-left: $i * 4px !important;
+  }
+  .pb_#{$i*4} {
+    padding-bottom: $i * 4px !important;
+  }
+  .mt_#{$i*4} {
+    margin-top: $i * 4px !important;
+  }
+  .mr_#{$i*4} {
+    margin-right: $i * 4px !important;
+  }
+  .ml_#{$i*4} {
+    margin-left: $i * 4px !important;
+  }
+  .mb_#{$i*4} {
+    margin-bottom: $i * 4px !important;
+  }
+}
+
+.pos_a {
+  position: absolute;
+
+  &.center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

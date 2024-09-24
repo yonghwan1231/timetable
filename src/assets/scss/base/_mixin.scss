@@ -1,0 +1,36 @@
+@mixin flex($jc: center, $ai: center, $fd: row, $fw: nowrap) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $fd;
+  flex-wrap: $fw;
+}
+@mixin font($fs: 16px, $fw: 400, $color: $black) {
+  font-size: $fs;
+  font-weight: $fw;
+  color: $color;
+}
+@mixin positionCenter() {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin mobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 768px) and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}

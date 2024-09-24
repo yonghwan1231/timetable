@@ -1,0 +1,22 @@
+.container {
+  margin: 24px auto;
+  padding: 12px;
+  max-width: 1024px;
+}
+
+button,
+select,
+input,
+label {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+*:disabled {
+  background-color: #eee !important;
+}
+
+.hidden {
+  display: none;
+}

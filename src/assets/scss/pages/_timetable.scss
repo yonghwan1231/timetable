@@ -1,0 +1,113 @@
+#timetable {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+
+  header {
+    @include flex(space-between);
+    border-bottom: 2px solid #ccc;
+    nav {
+      ul {
+        @include flex(flex-start);
+        box-sizing: border-box;
+
+        li {
+          position: relative;
+          padding: 8px 28px;
+          font-weight: bold;
+          cursor: pointer;
+
+          &.active::before {
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            display: inline-block;
+            width: 100%;
+            height: 2px;
+            background-color: red;
+            content: '';
+          }
+        }
+      }
+    }
+
+    .btn_apply_to_all_wrap {
+      @include flex();
+      column-gap: 8px;
+      font-weight: bold;
+    }
+  }
+
+  .timetable_wrap {
+    @include flex($fd: column);
+    row-gap: 12px;
+
+    input[type='time'] {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 4px;
+      flex-grow: 1;
+    }
+
+    .breaktime_wrap {
+      @include flex($fd: column);
+      row-gap: 8px;
+
+      dl {
+        @include flex();
+        column-gap: 8px;
+      }
+    }
+
+    .part_wrap {
+      @include flex(flex-start, center, column);
+
+      min-width: 400px;
+      border: 1px solid #eee;
+
+      h3 {
+        padding: 8px;
+        width: 100%;
+        text-align: center;
+        background-color: #eee;
+      }
+
+      ul {
+        width: 100%;
+        height: 214px;
+        padding: 12px;
+
+        li {
+          padding: 4px 0;
+          dl {
+            @include flex(flex-start);
+            flex-wrap: wrap;
+            column-gap: 8px;
+
+            dt {
+              @include flex(space-between);
+              width: 56px;
+              font-weight: bold;
+            }
+
+            dd {
+              .btn_del {
+                width: 52px;
+                height: 30px;
+                border-radius: 8px;
+                color: #fff;
+                background-color: red;
+              }
+            }
+          }
+        }
+      }
+
+      .btn_add {
+        padding: 8px;
+        width: 100%;
+        color: #fff;
+        background-color: #000;
+      }
+    }
+  }
+}
