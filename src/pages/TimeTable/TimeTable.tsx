@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import { ToggleButton } from '@components'
-import { TimeTableItem } from './TimeTableItem'
+import { TimetableItem } from './TimetableItem'
 
-export const TimeTable = () => {
+export const Timetable = () => {
   const [classrooms, setClassrooms] = useState<TTimeTable.ClassroomInfo[]>([
     { location: '2A-1 (201~)' },
     { location: '3B-1 (301~)' },
@@ -67,7 +67,7 @@ export const TimeTable = () => {
 
       <section className="timetable_wrap mt_12">
         {classrooms.map((classroomInfo, idx) => (
-          <TimeTableItem
+          <TimetableItem
             key={idx}
             isActive={selected === idx}
             classroomInfo={classroomInfo}

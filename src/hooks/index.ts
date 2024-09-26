@@ -1,1 +1,1 @@
-export * from './useTimeTable'
+export * from './useTimetable'

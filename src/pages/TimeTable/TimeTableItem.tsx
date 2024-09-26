@@ -1,4 +1,4 @@
-import { useTimeTable } from '@hooks'
+import { useTimetable } from '@hooks'
 
 type OwnProps = {
   classroomInfo: TTimeTable.ClassroomInfo
@@ -9,9 +9,9 @@ type OwnProps = {
   isApplyToAll: boolean
 }
 
-export const TimeTableItem = (props: OwnProps) => {
+export const TimetableItem = (props: OwnProps) => {
   const { addPeriod, updatePeriod, removePeriod, updateBreakTime } =
-    useTimeTable(props)
+    useTimetable(props)
   const { classroomInfo, isActive } = props
 
   if (isActive)

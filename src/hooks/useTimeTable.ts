@@ -16,7 +16,7 @@ const messages = {
   3: '종료시간은 다음 교시의 시작시간보다 늦을 수 없습니다.',
 }
 
-export const useTimeTable = ({
+export const useTimetable = ({
   classroomInfo,
   setClassrooms,
   isApplyToAll,

@@ -1,2 +1,2 @@
-export * from './TimeTable/TimeTable'
-export * from './TimeTable/TimeTableItem'
+export * from './Timetable/Timetable'
+export * from './Timetable/TimetableItem'
